@@ -1,66 +1,80 @@
-/*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+/* ========================================
+   MAIN JAVASCRIPT
+   ======================================== */
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('nav-toggle','nav-menu')
-
-/*===== ACTIVE AND REMOVE MENU =====*/
-const navLink = document.querySelectorAll('.nav__link');
-
-function linkAction(){
-  /*Active link*/
-  navLink.forEach(n => n.classList.remove('active'));
-  this.classList.add('active');
-
-  /*Remove menu mobile*/
-  const navMenu = document.getElementById('nav-menu')
-  navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction));
-
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'bottom',
-    distance: '80px',
-    duration: 2000,
-    reset: true
+// Page Loader
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.page-loader');
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add('hidden');
+    }, 1000); // Hide after 1 second
+  }
 });
 
-/*SCROLL HOME*/
-sr.reveal('.home__title',{});
-sr.reveal('.button',{delay: 200});
-sr.reveal('.home__img',{delay: 400});
-sr.reveal('.home__social-icon',{ interval: 200});
-// sr.reveal('.home__img',{delay: 400});
+// Smooth Scroll for Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
 
-/*SCROLL ABOUT*/
-sr.reveal('.about__img',{delay: 200});
-sr.reveal('.about__subtitle',{delay: 400});
-sr.reveal('.about__text',{delay: 400});
+// Header Scroll Effect
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
 
-/*SCROLL SKILLS*/
-sr.reveal('.skills-text',{interval: 200});
-sr.reveal('.skills__data',{interval: 200});
+// Active Navigation Link
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav__link');
 
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop - 200) {
+      current = section.getAttribute('id');
+    }
+  });
 
-/*SCROLL EXPERIENCE AND EDUCATION*/
-sr.reveal('.timeline-box',{interval: 200});
+  navLinks.forEach(link => {
+    link.classList.remove('active-link');
+    if (link.getAttribute('href').includes(current)) {
+      link.classList.add('active-link');
+    }
+  });
+});
 
-/*SCROLL WORK*/
-sr.reveal('.blog-post__img',{interval: 200});
-sr.reveal('.blog-post',{interval: 200});
+// Scroll to Top Button
+const scrollTop = document.querySelector('.scroll-top');
+if (scrollTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollTop.classList.add('show');
+    } else {
+      scrollTop.classList.remove('show');
+    }
+  });
 
-/*SCROLL CONTACT*/
-sr.reveal('.contact__input',{interval: 200});
+  scrollTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
 
-/*SCROLL FOOTER*/
-sr.reveal('.footer__title',{ delay: 200});
-sr.reveal('.footer__phone',{ delay: 200});
-sr.reveal('.footer__social',{ interval: 200});
+console.log('Portfolio loaded successfully! 🚀');
