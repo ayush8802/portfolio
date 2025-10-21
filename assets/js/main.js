@@ -8,11 +8,11 @@ window.addEventListener('load', () => {
   if (loader) {
     setTimeout(() => {
       loader.classList.add('hidden');
-    }, 1000); // Hide after 1 second
+    }, 1000);
   }
 });
 
-// Smooth Scroll for Links
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -26,17 +26,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Header Scroll Effect
-const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
+// Header Scroll Effect - ONLY DECLARE ONCE
+const headerElement = document.querySelector('.header');
+if (headerElement) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      headerElement.classList.add('scrolled');
+    } else {
+      headerElement.classList.remove('scrolled');
+    }
+  });
+}
 
-// Active Navigation Link
+// Active Navigation
 const sections = document.querySelectorAll('.section');
 const navLinks = document.querySelectorAll('.nav__link');
 
@@ -45,7 +47,7 @@ window.addEventListener('scroll', () => {
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop - 200) {
+    if (window.scrollY >= sectionTop - 200) {
       current = section.getAttribute('id');
     }
   });
@@ -58,18 +60,18 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Scroll to Top Button
-const scrollTop = document.querySelector('.scroll-top');
-if (scrollTop) {
+// Scroll to Top
+const scrollTopBtn = document.querySelector('.scroll-top');
+if (scrollTopBtn) {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
-      scrollTop.classList.add('show');
+      scrollTopBtn.classList.add('show');
     } else {
-      scrollTop.classList.remove('show');
+      scrollTopBtn.classList.remove('show');
     }
   });
 
-  scrollTop.addEventListener('click', () => {
+  scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
