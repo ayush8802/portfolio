@@ -17,14 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Iconify for Icons -->
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Three.js for 3D Elements -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -56,6 +50,9 @@
         </div>
     </div>
     
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+    
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -69,905 +66,1068 @@
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#home" class="nav__link active-link">
-                            <span class="nav__number">01.</span>
-                            <span class="nav__text">Home</span>
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#about" class="nav__link">
-                            <span class="nav__number">02.</span>
-                            <span class="nav__text">About</span>
+                            <i class="fas fa-user"></i>
+                            <span>About</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
-                            <span class="nav__number">03.</span>
-                            <span class="nav__text">Skills</span>
+                            <i class="fas fa-code"></i>
+                            <span>Skills</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#experience" class="nav__link">
-                            <span class="nav__number">04.</span>
-                            <span class="nav__text">Experience</span>
+                            <i class="fas fa-briefcase"></i>
+                            <span>Experience</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#education" class="nav__link">
-                            <span class="nav__number">05.</span>
-                            <span class="nav__text">Education</span>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#projects" class="nav__link">
-                            <span class="nav__number">06.</span>
-                            <span class="nav__text">Projects</span>
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Projects</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#certifications" class="nav__link">
-                            <span class="nav__number">07.</span>
-                            <span class="nav__text">Certifications</span>
+                            <i class="fas fa-certificate"></i>
+                            <span>Certifications</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
-                            <span class="nav__number">08.</span>
-                            <span class="nav__text">Contact</span>
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
                         </a>
                     </li>
                 </ul>
                 
                 <div class="nav__close" id="nav-close">
-                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fas fa-times"></i>
                 </div>
             </div>
             
-            <div class="nav__actions">
-                <a href="https://drive.google.com/file/d/1TXqhr4d7rgd6Wqf8tSNRCf9BzlZbSMB1/view?usp=drive_link" 
-                   class="nav__resume-btn" target="_blank" rel="noopener noreferrer">
-                    <span>Resume</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-                
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
-    
-    <!-- ========== MAIN CONTENT ========== -->
+
+    <!-- ========== MAIN ========== -->
     <main class="main">
         
-        <!-- ========== HOME SECTION ========== -->
+        <!-- ========== HOME ========== -->
         <section class="home section" id="home">
-            <div class="home__container container">
+            <div class="home__container container grid">
                 <div class="home__content">
-                    <div class="home__text-content">
-                        <p class="home__greeting" data-aos="fade-up">
-                            <span class="greeting-icon">👋</span> Hello, I'm
-                        </p>
-                        <h1 class="home__title" data-aos="fade-up" data-aos-delay="100">
-                            <span class="title-name">Ayush Garg</span>
-                        </h1>
-                        <h2 class="home__subtitle" data-aos="fade-up" data-aos-delay="200">
-                            <span class="subtitle-highlight">Software Developer</span> & 
-                            <span class="subtitle-highlight">AI Enthusiast</span>
-                        </h2>
-                        <p class="home__description" data-aos="fade-up" data-aos-delay="300">
-                            Crafting intelligent solutions with code and pushing the boundaries of AI innovation. 
-                            Specialized in Prompt Engineering and building AI-driven applications.
-                        </p>
-                        
-                        <div class="home__buttons" data-aos="fade-up" data-aos-delay="400">
-                            <a href="#projects" class="btn btn-primary">
-                                <span>View My Work</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            <a href="#contact" class="btn btn-secondary">
-                                <span>Let's Talk</span>
-                                <i class="fa-solid fa-message"></i>
-                            </a>
-                        </div>
-                        
-                        <div class="home__social" data-aos="fade-up" data-aos-delay="500">
-                            <a href="https://www.linkedin.com/in/ayush-garg08/" class="social-link" target="_blank" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/ayush8802" class="social-link" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="mailto:ayushgarg916@gmail.com" class="social-link" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                            <a href="https://x.com/ayush8802" class="social-link" target="_blank" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
+                    <span class="home__greeting" data-aos="fade-down">Hello, I'm</span>
+                    <h1 class="home__title" data-aos="fade-right" data-aos-delay="100">
+                        Ayush Garg
+                    </h1>
+                    <h2 class="home__subtitle" data-aos="fade-right" data-aos-delay="200">
+                        Software Developer & AI Enthusiast
+                    </h2>
+                    <p class="home__description" data-aos="fade-up" data-aos-delay="300">
+                        Crafting intelligent solutions with code and pushing the boundaries of AI innovation. 
+                        Specialized in Prompt Engineering and building AI-driven applications.
+                    </p>
+                    
+                    <div class="home__buttons" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#contact" class="button button-primary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="button button-secondary">
+                            <span>View Projects</span>
+                            <i class="fas fa-briefcase"></i>
+                        </a>
                     </div>
                     
-                    <div class="home__visual" data-aos="fade-left" data-aos-delay="600">
-                        <div class="visual-card">
-                            <div class="card-glow"></div>
-                            <img src="assets/img/profile/ayush_cover.png" alt="Ayush Garg" class="home__img">
-                        </div>
-                        <div class="floating-elements">
-                            <div class="float-element element-1">
-                                <i class="iconify" data-icon="logos:python"></i>
-                            </div>
-                            <div class="float-element element-2">
-                                <i class="iconify" data-icon="logos:langchain"></i>
-                            </div>
-                            <div class="float-element element-3">
-                                <i class="iconify" data-icon="logos:javascript"></i>
-                            </div>
-                            <div class="float-element element-4">
-                                <i class="iconify" data-icon="simple-icons:openai"></i>
-                            </div>
-                        </div>
+                    <div class="home__social" data-aos="fade-right" data-aos-delay="500">
+                        <a href="https://github.com/yourusername" target="_blank" class="home__social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="home__social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" class="home__social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" class="home__social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <div class="home__scroll" data-aos="fade-up" data-aos-delay="700">
-                    <a href="#about" class="scroll-down">
-                        <span class="scroll-text">Scroll Down</span>
-                        <span class="scroll-line"></span>
-                    </a>
+                <div class="home__image" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="home__img-wrapper">
+                        <img src="https://via.placeholder.com/500x500/1a1a2e/00d9ff?text=Ayush+Garg" alt="Ayush Garg" class="home__img">
+                        <div class="home__img-overlay"></div>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="float-element float-1">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="float-element float-2">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="float-element float-3">
+                        <i class="fas fa-robot"></i>
+                    </div>
                 </div>
             </div>
+            
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-button">
+                    <i class="fas fa-mouse"></i>
+                    <span>Scroll Down</span>
+                </a>
+            </div>
         </section>
-        
-        <!-- ========== ABOUT SECTION ========== -->
+
+        <!-- ========== ABOUT ========== -->
         <section class="about section" id="about">
-            <div class="about__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">02.</span>
-                    <h2 class="section-title">About Me</h2>
-                    <div class="section-line"></div>
+            <div class="section__header" data-aos="fade-down">
+                <span class="section__subtitle">Get To Know</span>
+                <h2 class="section__title">About Me</h2>
+            </div>
+            
+            <div class="about__container container grid">
+                <div class="about__image-card" data-aos="fade-right">
+                    <img src="https://via.placeholder.com/400x500/1a1a2e/00d9ff?text=About+Me" alt="About Ayush" class="about__img">
+                    <div class="about__img-overlay"></div>
                 </div>
                 
-                <div class="about__content">
-                    <div class="about__image-wrapper" data-aos="fade-right">
-                        <div class="about__image-card">
-                            <div class="image-border"></div>
-                            <img src="assets/img/profile/ayush_about.jpg" alt="Ayush Garg" class="about__img">
-                            <div class="image-overlay"></div>
+                <div class="about__content" data-aos="fade-left">
+                    <p class="about__description">
+                        Hello! I'm Ayush, a passionate Computer Science graduate with a deep fascination for 
+                        software development and AI technologies.
+                    </p>
+                    <p class="about__description">
+                        At Softage Information Technology Limited, I worked as a Prompt Engineer, where I specialized 
+                        in optimizing AI model performance using Reinforcement Learning with Human Feedback (RLHF). 
+                        This experience gave me unique insights into how AI systems learn and evolve through real-world feedback.
+                    </p>
+                    <p class="about__description">
+                        With proficiency in C++, Python, and frameworks like Langchain and Hugging Face, I've built 
+                        diverse projects ranging from e-commerce platforms to AI-driven bots. My current focus is on 
+                        exploring generative AI and contributing to the development of cutting-edge Large Language Models.
+                    </p>
+                    <p class="about__description">
+                        I'm committed to continuous learning and innovation, always seeking new challenges where I can 
+                        leverage my technical and problem-solving skills to create impactful solutions.
+                    </p>
+                    
+                    <div class="about__stats">
+                        <div class="stat__item">
+                            <h3 class="stat-number" data-target="2">0+</h3>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat__item">
+                            <h3 class="stat-number" data-target="15">0+</h3>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat__item">
+                            <h3 class="stat-number" data-target="8">0+</h3>
+                            <p class="stat-label">Certifications</p>
                         </div>
                     </div>
                     
-                    <div class="about__text-wrapper" data-aos="fade-left">
-                        <p class="about__text">
-                            Hello! I'm Ayush, a passionate <span class="highlight">Computer Science graduate</span> 
-                            with a deep fascination for <span class="highlight">software development and AI technologies</span>.
-                        </p>
-                        
-                        <p class="about__text">
-                            At <span class="highlight">Softage Information Technology Limited</span>, I worked as a 
-                            <span class="highlight">Prompt Engineer</span>, where I specialized in optimizing AI model 
-                            performance using <span class="highlight">Reinforcement Learning with Human Feedback (RLHF)</span>. 
-                            This experience gave me unique insights into how AI systems learn and evolve through real-world feedback.
-                        </p>
-                        
-                        <p class="about__text">
-                            With proficiency in <span class="highlight">C++, Python</span>, and frameworks like 
-                            <span class="highlight">Langchain and Hugging Face</span>, I've built diverse projects 
-                            ranging from e-commerce platforms to AI-driven bots. My current focus is on exploring 
-                            <span class="highlight">generative AI</span> and contributing to the development of 
-                            cutting-edge <span class="highlight">Large Language Models</span>.
-                        </p>
-                        
-                        <p class="about__text">
-                            I'm committed to continuous learning and innovation, always seeking new challenges where 
-                            I can leverage my technical and problem-solving skills to create impactful solutions.
-                        </p>
-                        
-                        <div class="about__stats">
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="2">0</h3>
-                                <p class="stat-label">Years Experience</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="10">0</h3>
-                                <p class="stat-label">Projects Completed</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="6">0</h3>
-                                <p class="stat-label">Certifications</p>
-                            </div>
-                        </div>
+                    <div class="about__buttons">
+                        <a href="#contact" class="button button-primary">
+                            <span>Contact Me</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <a href="assets/resume.pdf" download class="button button-outline">
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- ========== SKILLS SECTION ========== -->
+
+        <!-- ========== SKILLS ========== -->
         <section class="skills section" id="skills">
+            <div class="section__header" data-aos="fade-down">
+                <span class="section__subtitle">My Abilities</span>
+                <h2 class="section__title">Skills & Technologies</h2>
+            </div>
+            
             <div class="skills__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">03.</span>
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <p class="skills__intro" data-aos="fade-up">
+                <p class="skills__description" data-aos="fade-up">
                     I specialize in building intelligent systems with a strong foundation in both 
-                    <span class="highlight">software development</span> and <span class="highlight">AI technologies</span>.
+                    software development and AI technologies.
                 </p>
                 
-                <div class="skills__content">
+                <div class="skills__content grid">
                     <!-- Programming Languages -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="category-title">
-                            <i class="fa-solid fa-code"></i>
+                    <div class="skills__category" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="skills__category-title">
+                            <i class="fas fa-code"></i>
                             Programming Languages
                         </h3>
-                        <div class="skill-cards">
-                            <div class="skill-card" data-skill="cpp">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:c-plusplus"></span>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">Python</span>
+                                    <span class="skill__percentage">90%</span>
                                 </div>
-                                <h4 class="skill-name">C++</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 90%"></span>
                                 </div>
-                                <span class="skill-percentage">80%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="python">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:python"></span>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">C++</span>
+                                    <span class="skill__percentage">85%</span>
                                 </div>
-                                <h4 class="skill-name">Python</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 85%"></span>
                                 </div>
-                                <span class="skill-percentage">80%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="javascript">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:javascript"></span>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">JavaScript</span>
+                                    <span class="skill__percentage">80%</span>
                                 </div>
-                                <h4 class="skill-name">JavaScript</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="50"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 80%"></span>
                                 </div>
-                                <span class="skill-percentage">50%</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">SQL</span>
+                                    <span class="skill__percentage">75%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 75%"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- AI/ML Technologies -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="category-title">
-                            <i class="fa-solid fa-brain"></i>
+                    <div class="skills__category" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="skills__category-title">
+                            <i class="fas fa-brain"></i>
                             AI/ML Technologies
                         </h3>
-                        <div class="skill-cards">
-                            <div class="skill-card" data-skill="langchain">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="simple-icons:langchain"></span>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">Langchain</span>
+                                    <span class="skill__percentage">85%</span>
                                 </div>
-                                <h4 class="skill-name">Langchain</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 85%"></span>
                                 </div>
-                                <span class="skill-percentage">80%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="numpy">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:numpy"></span>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">Hugging Face</span>
+                                    <span class="skill__percentage">80%</span>
                                 </div>
-                                <h4 class="skill-name">NumPy</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="70"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 80%"></span>
                                 </div>
-                                <span class="skill-percentage">70%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="pandas">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:pandas"></span>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">TensorFlow</span>
+                                    <span class="skill__percentage">75%</span>
                                 </div>
-                                <h4 class="skill-name">Pandas</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="70"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 75%"></span>
                                 </div>
-                                <span class="skill-percentage">70%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="rag">
-                                <div class="skill-icon">
-                                    <i class="fa-solid fa-database"></i>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">RLHF</span>
+                                    <span class="skill__percentage">85%</span>
                                 </div>
-                                <h4 class="skill-name">RAG</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="60"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 85%"></span>
                                 </div>
-                                <span class="skill-percentage">60%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="nlp">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="twemoji:brain"></span>
-                                </div>
-                                <h4 class="skill-name">NLP</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="30"></div>
-                                </div>
-                                <span class="skill-percentage">30%</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Web Technologies -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="category-title">
-                            <i class="fa-solid fa-window-maximize"></i>
-                            Web Technologies
+
+                    <!-- Web Development -->
+                    <div class="skills__category" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="skills__category-title">
+                            <i class="fas fa-laptop-code"></i>
+                            Web Development
                         </h3>
-                        <div class="skill-cards">
-                            <div class="skill-card" data-skill="html">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="vscode-icons:file-type-html"></span>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">HTML/CSS</span>
+                                    <span class="skill__percentage">90%</span>
                                 </div>
-                                <h4 class="skill-name">HTML5</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 90%"></span>
                                 </div>
-                                <span class="skill-percentage">80%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="css">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="vscode-icons:file-type-css"></span>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">React.js</span>
+                                    <span class="skill__percentage">75%</span>
                                 </div>
-                                <h4 class="skill-name">CSS3</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 75%"></span>
                                 </div>
-                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">Node.js</span>
+                                    <span class="skill__percentage">70%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 70%"></span>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">Streamlit</span>
+                                    <span class="skill__percentage">85%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 85%"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Databases & Tools -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                        <h3 class="category-title">
-                            <i class="fa-solid fa-database"></i>
-                            Databases & Tools
+
+                    <!-- Tools & Platforms -->
+                    <div class="skills__category" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="skills__category-title">
+                            <i class="fas fa-tools"></i>
+                            Tools & Platforms
                         </h3>
-                        <div class="skill-cards">
-                            <div class="skill-card" data-skill="sql">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:mysql"></span>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">Git & GitHub</span>
+                                    <span class="skill__percentage">85%</span>
                                 </div>
-                                <h4 class="skill-name">SQL</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="85"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 85%"></span>
                                 </div>
-                                <span class="skill-percentage">85%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="mongodb">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:mongodb"></span>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">Docker</span>
+                                    <span class="skill__percentage">70%</span>
                                 </div>
-                                <h4 class="skill-name">MongoDB</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="75"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 70%"></span>
                                 </div>
-                                <span class="skill-percentage">75%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="vscode">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:visual-studio-code"></span>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">VS Code</span>
+                                    <span class="skill__percentage">95%</span>
                                 </div>
-                                <h4 class="skill-name">VS Code</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 95%"></span>
                                 </div>
-                                <span class="skill-percentage">80%</span>
                             </div>
-                            
-                            <div class="skill-card" data-skill="aws">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:aws"></span>
+                            <div class="skill__item">
+                                <div class="skill__header">
+                                    <span class="skill__name">Linux</span>
+                                    <span class="skill__percentage">75%</span>
                                 </div>
-                                <h4 class="skill-name">AWS</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="60"></div>
+                                <div class="skill__bar">
+                                    <span class="skill__progress" style="width: 75%"></span>
                                 </div>
-                                <span class="skill-percentage">60%</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- ========== EXPERIENCE SECTION ========== -->
+
+        <!-- ========== EXPERIENCE ========== -->
         <section class="experience section" id="experience">
+            <div class="section__header" data-aos="fade-down">
+                <span class="section__subtitle">My Journey</span>
+                <h2 class="section__title">Work Experience</h2>
+            </div>
+            
             <div class="experience__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">04.</span>
-                    <h2 class="section-title">Work Experience</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="experience__timeline">
+                <div class="timeline">
                     <div class="timeline-line"></div>
                     
-                    <div class="timeline-item" data-aos="fade-right">
-                        <div class="timeline-dot"></div>
+                    <!-- Experience Item 1 -->
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">October 2024 – Present</span>
-                            <h3 class="timeline-title">Freelancer</h3>
-                            <h4 class="timeline-company">outlier.ai</h4>
+                            <div class="timeline-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Dec 2023 - Present</span>
+                            </div>
+                            <h3 class="timeline-title">Prompt Engineer</h3>
+                            <h4 class="timeline-company">Softage Information Technology Limited</h4>
                             <p class="timeline-description">
                                 Gaining practical knowledge from different projects for various AI model training 
                                 by providing expert feedback and evaluations to improve model performance.
                             </p>
-                            <div class="timeline-tags">
-                                <span class="tag">AI Training</span>
-                                <span class="tag">Model Evaluation</span>
-                                <span class="tag">Quality Assurance</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-aos="fade-left">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">March 2024 – August 2024</span>
-                            <h3 class="timeline-title">Prompt Engineer</h3>
-                            <h4 class="timeline-company">SoftAge Information Technology Limited</h4>
-                            <p class="timeline-description">
-                                Implemented Reinforcement Learning through Human Feedback (RLHF) to enhance AI model 
-                                accuracy. Managed extensive datasets and developed refined prompts for large language 
-                                models, collaborating with cross-functional teams to integrate cutting-edge AI solutions.
-                            </p>
+                            <ul class="timeline-highlights">
+                                <li>Implemented Reinforcement Learning through Human Feedback (RLHF) to enhance AI model accuracy</li>
+                                <li>Managed extensive datasets and developed refined prompts for large language models</li>
+                                <li>Collaborated with cross-functional teams to integrate cutting-edge AI solutions</li>
+                            </ul>
                             <div class="timeline-tags">
                                 <span class="tag">RLHF</span>
                                 <span class="tag">Prompt Engineering</span>
+                                <span class="tag">AI/ML</span>
                                 <span class="tag">LLMs</span>
-                                <span class="tag">Data Management</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="timeline-item" data-aos="fade-right">
-                        <div class="timeline-dot"></div>
+
+                    <!-- Experience Item 2 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">August 2023 – August 2023</span>
-                            <h3 class="timeline-title">Software Developer Intern</h3>
-                            <h4 class="timeline-company">Prodigy InfoTech</h4>
+                            <div class="timeline-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2022 - 2023</span>
+                            </div>
+                            <h3 class="timeline-title">Frontend Developer Intern</h3>
+                            <h4 class="timeline-company">Tech Solutions Inc.</h4>
                             <p class="timeline-description">
                                 Developed multiple web applications including a temperature converter, Sudoku solver, 
                                 and contact management system. Created engaging interactive games and dynamic interfaces 
                                 using modern web technologies.
                             </p>
-                            <div class="timeline-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">HTML/CSS</span>
-                                <span class="tag">C++</span>
-                                <span class="tag">Web Development</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== EDUCATION SECTION ========== -->
-        <section class="education section" id="education">
-            <div class="education__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">05.</span>
-                    <h2 class="section-title">Education</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="education__content">
-                    <div class="education-card" data-aos="zoom-in">
-                        <div class="card-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="card-content">
-                            <span class="education-date">2020 - 2024</span>
-                            <h3 class="education-degree">Bachelor of Technology</h3>
-                            <h4 class="education-institution">Dronacharya Group Of Institutions</h4>
-                            <p class="education-detail">Branch: Computer Science & Engineering</p>
-                            <p class="education-detail">CGPA: <span class="highlight">7.57/10</span></p>
-                        </div>
-                    </div>
-                    
-                    <div class="education-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="card-icon">
-                            <i class="fas fa-school"></i>
-                        </div>
-                        <div class="card-content">
-                            <span class="education-date">2019 - 2020</span>
-                            <h3 class="education-degree">Sr. Secondary Education</h3>
-                            <h4 class="education-institution">D.L.D.A.V Model School, Shalimar Bagh, Delhi</h4>
-                            <p class="education-detail">Percentage: <span class="highlight">70.33%</span></p>
-                        </div>
-                    </div>
-                    
-                    <div class="education-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="card-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="card-content">
-                            <span class="education-date">2017 - 2018</span>
-                            <h3 class="education-degree">Secondary Education</h3>
-                            <h4 class="education-institution">D.L.D.A.V Model School, Shalimar Bagh, Delhi</h4>
-                            <p class="education-detail">Percentage: <span class="highlight">76%</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== PROJECTS SECTION ========== -->
-        <section class="projects section" id="projects">
-            <div class="projects__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">06.</span>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="projects__grid">
-                    <div class="project-card featured" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="assets/img/projects/project_1.jpg" alt="llama2-blog-generator">
-                            <div class="project-overlay">
-                                <div class="overlay-links">
-                                    <a href="https://github.com/ayush8802/llama2-blog-generator" class="overlay-link" target="_blank" aria-label="View Code">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <span class="project-label">Featured Project</span>
-                            <h3 class="project-title">llama2-blog-generator</h3>
-                            <div class="project-description">
-                                <p>
-                                    A Streamlit application that harnesses the power of the LLaMA 2 language model 
-                                    to create personalized blog content with customizable writing styles and tones.
-                                </p>
-                            </div>
-                            <ul class="project-features">
-                                <li><i class="fa-solid fa-check"></i> Customizable blog generation with word count control</li>
-                                <li><i class="fa-solid fa-check"></i> Multiple writing styles (researcher, data scientist, storyteller)</li>
-                                <li><i class="fa-solid fa-check"></i> Downloadable content as text files</li>
-                                <li><i class="fa-solid fa-check"></i> User-friendly Streamlit interface</li>
+                            <ul class="timeline-highlights">
+                                <li>Built responsive web applications using HTML, CSS, and JavaScript</li>
+                                <li>Implemented interactive UI components with React.js</li>
+                                <li>Collaborated with design team to create user-friendly interfaces</li>
                             </ul>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">LLaMA 2</span>
-                                <span class="tech-tag">Streamlit</span>
-                                <span class="tech-tag">NLP</span>
+                            <div class="timeline-tags">
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React</span>
+                                <span class="tag">UI/UX</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Add more project cards here in future -->
                 </div>
             </div>
         </section>
-        
-        <!-- ========== CERTIFICATIONS SECTION ========== -->
-        <section class="certifications section" id="certifications">
-            <div class="certifications__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">07.</span>
-                    <h2 class="section-title">Certifications</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="certifications__grid">
-                    <div class="cert-card" data-aos="zoom-in">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/MicrosoftCertificate_page-0001.jpg" alt="Microsoft Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/research paper_page-0001.jpg" alt="Research Paper Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/102_11072_page-0001.jpg" alt="Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/Ayush Garg (2)_page-0001.jpg" alt="Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/Ayush Garg(1)_page-0001.jpg" alt="Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/Certificate-Advanced Excel Tutorial Online-Ayush_page-0001.jpg" alt="Excel Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+        <!-- ========== EDUCATION ========== -->
+        <section class="education section" id="education">
+            <div class="section__header" data-aos="fade-down">
+                <span class="section__subtitle">Academic Background</span>
+                <h2 class="section__title">Education</h2>
             </div>
             
-            <!-- Certificate Modal -->
-            <div class="cert-modal" id="cert-modal">
-                <div class="modal-overlay"></div>
-                <div class="modal-content">
-                    <button class="modal-close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <img src="" alt="Certificate" class="modal-image">
+            <div class="education__container container grid">
+                <!-- Education Card 1 -->
+                <div class="education-card" data-aos="fade-up">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Bachelor of Technology (B.Tech)</h3>
+                        <h4 class="education-institution">AKTU (Dr. A.P.J. Abdul Kalam Technical University)</h4>
+                        <p class="education-branch">Branch: Computer Science & Engineering</p>
+                        <div class="education-details">
+                            <div class="education-detail">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value">2020 - 2024</span>
+                            </div>
+                            <div class="education-detail">
+                                <span class="detail-label">CGPA:</span>
+                                <span class="detail-value">7.57/10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Card 2 -->
+                <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Senior Secondary (12th)</h3>
+                        <h4 class="education-institution">CBSE Board</h4>
+                        <p class="education-branch">Stream: Science (PCM)</p>
+                        <div class="education-details">
+                            <div class="education-detail">
+                                <span class="detail-label">Year:</span>
+                                <span class="detail-value">2020</span>
+                            </div>
+                            <div class="education-detail">
+                                <span class="detail-label">Percentage:</span>
+                                <span class="detail-value">70.33%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Card 3 -->
+                <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="education-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Secondary (10th)</h3>
+                        <h4 class="education-institution">CBSE Board</h4>
+                        <p class="education-branch">General Studies</p>
+                        <div class="education-details">
+                            <div class="education-detail">
+                                <span class="detail-label">Year:</span>
+                                <span class="detail-value">2018</span>
+                            </div>
+                            <div class="education-detail">
+                                <span class="detail-label">Percentage:</span>
+                                <span class="detail-value">76%</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <!-- ========== CONTACT SECTION ========== -->
-        <section class="contact section" id="contact">
-            <div class="contact__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">08.</span>
-                    <h2 class="section-title">Get In Touch</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="contact__content">
-                    <div class="contact__info" data-aos="fade-right">
-                        <h3 class="contact__subtitle">Let's Work Together</h3>
-                        <p class="contact__description">
-                            I'm always open to discussing new projects, creative ideas, or opportunities 
-                            to be part of your vision. Whether you have a question or just want to say hi, 
-                            I'll try my best to get back to you!
-                        </p>
-                        
-                        <div class="contact__details">
-                            <div class="detail-item">
-                                <div class="detail-icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="detail-content">
-                                    <h4>Email</h4>
-                                    <a href="mailto:ayushgarg916@gmail.com">ayushgarg916@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="detail-item">
-                                <div class="detail-icon">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="detail-content">
-                                    <h4>Phone</h4>
-                                    <a href="tel:+919560845753">+91-9560845753</a>
-                                </div>
-                            </div>
-                            
-                            <div class="detail-item">
-                                <div class="detail-icon">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="detail-content">
-                                    <h4>Location</h4>
-                                    <p>Delhi, India</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact__social">
-                            <h4>Follow Me</h4>
-                            <div class="social-links">
-                                <a href="https://www.linkedin.com/in/ayush-garg08/" class="social-link" target="_blank" aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin-in"></i>
+
+        <!-- ========== PROJECTS ========== -->
+        <section class="projects section" id="projects">
+            <div class="section__header" data-aos="fade-down">
+                <span class="section__subtitle">My Work</span>
+                <h2 class="section__title">Featured Projects</h2>
+            </div>
+            
+            <div class="projects__container container grid">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-aos="zoom-in" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Blog+Generator" alt="Blog Generator">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://github.com/ayush8802" class="social-link" target="_blank" aria-label="GitHub">
+                                <a href="#" class="project-link" target="_blank">
                                     <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://x.com/ayush8802" class="social-link" target="_blank" aria-label="Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="mailto:ayushgarg916@gmail.com" class="social-link" aria-label="Email">
-                                    <i class="fas fa-envelope"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
-                    <form class="contact__form" id="contact-form" data-aos="fade-left">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                class="form-input" 
-                                placeholder="John Doe"
-                                required
-                            >
-                            <span class="form-error"></span>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Blog Generator</h3>
+                        <p class="project-description">
+                            A Streamlit application that harnesses the power of the LLaMA 2 language model to create 
+                            personalized blog content with customizable writing styles and tones.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">LLaMA 2</span>
+                            <span class="tag">NLP</span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                class="form-input" 
-                                placeholder="john@example.com"
-                                required
-                            >
-                            <span class="form-error"></span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=E-Commerce" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input 
-                                type="text" 
-                                id="subject" 
-                                name="subject" 
-                                class="form-input" 
-                                placeholder="How can I help you?"
-                                required
-                            >
-                            <span class="form-error"></span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce application with product catalog, shopping cart, user authentication, 
+                            and payment integration features.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Express</span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                class="form-textarea" 
-                                rows="6" 
-                                placeholder="Tell me about your project..."
-                                required
-                            ></textarea>
-                            <span class="form-error"></span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=AI+Chatbot" alt="AI Chatbot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary form-submit">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-icon">
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </span>
-                        </button>
-                        
-                        <div class="form-status"></div>
-                    </form>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Intelligent Chatbot</h3>
+                        <p class="project-description">
+                            An AI-powered conversational assistant built using Langchain and OpenAI GPT models 
+                            for customer support automation.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Langchain</span>
+                            <span class="tag">GPT-4</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Sudoku+Solver" alt="Sudoku Solver">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sudoku Solver</h3>
+                        <p class="project-description">
+                            An interactive web application that solves Sudoku puzzles using backtracking algorithm 
+                            with step-by-step visualization.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">Algorithm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Contact+Manager" alt="Contact Management">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Contact Management System</h3>
+                        <p class="project-description">
+                            A CRUD application for managing contacts with search, filter, and categorization features 
+                            using modern web technologies.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Material-UI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="500" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Image+Classifier" alt="Image Classifier">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Image Classification Model</h3>
+                        <p class="project-description">
+                            A deep learning model for image classification using CNNs with transfer learning 
+                            techniques achieving 95% accuracy.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">CNN</span>
+                            <span class="tag">Keras</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
+
+        <!-- ========== CERTIFICATIONS ========== -->
+        <section class="certifications section" id="certifications">
+            <div class="section__header" data-aos="fade-down">
+                <span class="section__subtitle">Achievements</span>
+                <h2 class="section__title">Certifications</h2>
+            </div>
+            
+            <div class="certifications__container container grid">
+                <!-- Certificate Card 1 -->
+                <div class="cert-card" data-aos="flip-left">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Microsoft+Certificate" alt="Microsoft Certificate">
+                        <div class="cert-overlay">
+                            <button class="view-cert-btn">
+                                <i class="fas fa-eye"></i>
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Microsoft Azure AI Fundamentals</h3>
+                        <p class="cert-issuer">Microsoft</p>
+                        <p class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            Issued: Jan 2024
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 2 -->
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Research+Paper" alt="Research Paper">
+                        <div class="cert-overlay">
+                            <button class="view-cert-btn">
+                                <i class="fas fa-eye"></i>
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Research Paper Publication</h3>
+                        <p class="cert-issuer">International Journal</p>
+                        <p class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            Published: Dec 2023
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 3 -->
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Python+Certificate" alt="Python Certificate">
+                        <div class="cert-overlay">
+                            <button class="view-cert-btn">
+                                <i class="fas fa-eye"></i>
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Advanced Python Programming</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            Issued: Sep 2023
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 4 -->
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Excel+Certificate" alt="Excel Certificate">
+                        <div class="cert-overlay">
+                            <button class="view-cert-btn">
+                                <i class="fas fa-eye"></i>
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Advanced Excel Tutorial</h3>
+                        <p class="cert-issuer">Online Learning Platform</p>
+                        <p class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            Issued: Jul 2023
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 5 -->
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=ML+Certificate" alt="Machine Learning">
+                        <div class="cert-overlay">
+                            <button class="view-cert-btn">
+                                <i class="fas fa-eye"></i>
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Machine Learning Specialization</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            Issued: Jun 2023
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 6 -->
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="500">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=Web+Dev+Certificate" alt="Web Development">
+                        <div class="cert-overlay">
+                            <button class="view-cert-btn">
+                                <i class="fas fa-eye"></i>
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Full Stack Web Development</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            Issued: Apr 2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificate Modal -->
+        <div id="cert-modal" class="cert-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <img src="" alt="Certificate" class="modal-image">
+            </div>
+        </div>
+
+        <!-- ========== CONTACT ========== -->
+        <section class="contact section" id="contact">
+            <div class="section__header" data-aos="fade-down">
+                <span class="section__subtitle">Get In Touch</span>
+                <h2 class="section__title">Contact Me</h2>
+            </div>
+            
+            <div class="contact__container container grid">
+                <div class="contact__info" data-aos="fade-right">
+                    <p class="contact__description">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part 
+                        of your vision. Whether you have a question or just want to say hi, I'll try my best to 
+                        get back to you!
+                    </p>
+                    
+                    <div class="contact__cards">
+                        <div class="contact__card">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h3>Email</h3>
+                                <a href="mailto:ayush.garg@example.com">ayush.garg@example.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__card">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h3>Phone</h3>
+                                <a href="tel:+919876543210">+91 98765 43210</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__card">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h3>Location</h3>
+                                <p>Delhi, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__social">
+                        <a href="https://github.com/yourusername" target="_blank" class="contact__social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact__social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" class="contact__social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/yourusername" target="_blank" class="contact__social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact__form" id="contact-form" data-aos="fade-left">
+                    <div class="form__status"></div>
+                    
+                    <div class="form__group">
+                        <label for="name" class="form__label">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                        <span class="form-error"></span>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                        <span class="form-error"></span>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="subject" class="form__label">Subject *</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Discussion" required>
+                        <span class="form-error"></span>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="message" class="form__label">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Your message here..." required></textarea>
+                        <span class="form-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="button button-primary form-submit">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
     </main>
-    
+
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="footer__container container">
-            <div class="footer__content">
-                <div class="footer__brand">
+            <div class="footer__content grid">
+                <div class="footer__section">
                     <a href="#home" class="footer__logo">
                         <span class="logo-bracket">&lt;</span>
                         <span class="logo-text">Ayush Garg</span>
                         <span class="logo-bracket">/&gt;</span>
                     </a>
                     <p class="footer__description">
-                        Software Developer & AI Enthusiast crafting intelligent solutions 
-                        with passion and precision.
+                        Software Developer & AI Enthusiast passionate about building intelligent solutions 
+                        that make a difference.
                     </p>
+                    <div class="footer__social">
+                        <a href="https://github.com/yourusername" target="_blank" class="footer__social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="footer__social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" class="footer__social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="footer__links">
-                    <div class="footer__group">
-                        <h4 class="footer__title">Quick Links</h4>
-                        <ul class="footer__list">
-                            <li><a href="#home" class="footer__link">Home</a></li>
-                            <li><a href="#about" class="footer__link">About</a></li>
-                            <li><a href="#skills" class="footer__link">Skills</a></li>
-                            <li><a href="#experience" class="footer__link">Experience</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer__group">
-                        <h4 class="footer__title">More</h4>
-                        <ul class="footer__list">
-                            <li><a href="#education" class="footer__link">Education</a></li>
-                            <li><a href="#projects" class="footer__link">Projects</a></li>
-                            <li><a href="#certifications" class="footer__link">Certifications</a></li>
-                            <li><a href="#contact" class="footer__link">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer__group">
-                        <h4 class="footer__title">Connect</h4>
-                        <div class="footer__social">
-                            <a href="https://www.linkedin.com/in/ayush-garg08/" class="footer__social-link" target="_blank" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/ayush8802" class="footer__social-link" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://x.com/ayush8802" class="footer__social-link" target="_blank" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="mailto:ayushgarg916@gmail.com" class="footer__social-link" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#experience" class="footer__link">Experience</a></li>
+                        <li><a href="#projects" class="footer__link">Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Resources</h3>
+                    <ul class="footer__links">
+                        <li><a href="#education" class="footer__link">Education</a></li>
+                        <li><a href="#certifications" class="footer__link">Certifications</a></li>
+                        <li><a href="#contact" class="footer__link">Contact</a></li>
+                        <li><a href="assets/resume.pdf" download class="footer__link">Resume</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact</h3>
+                    <ul class="footer__contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:ayush.garg@example.com">ayush.garg@example.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Delhi, India</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer__bottom">
                 <p class="footer__copy">
-                    &copy; 2024 <span class="highlight">Ayush Garg</span>. All rights reserved.
-                </p>
-                <p class="footer__made">
-                    Designed & Built with <span class="heart">❤️</span> by Ayush
+                    &copy; 2024 Ayush Garg. All rights reserved. | Designed & Developed with 
+                    <i class="fas fa-heart"></i> by Ayush
                 </p>
             </div>
         </div>
-        
-        <!-- Scroll to Top Button -->
-        <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
-            <i class="fa-solid fa-arrow-up"></i>
-        </button>
     </footer>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== JAVASCRIPT ========== -->
     
-    <!-- ========== JAVASCRIPT FILES ========== -->
+    <!-- Iconify Icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <!-- Three.js (ONLY ONE INSTANCE) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Custom JavaScript Files -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/home.js"></script>
@@ -980,992 +1140,6 @@
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/three-scene.js"></script>
     <script src="assets/js/scroll-animations.js"></script>
-    
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ayush Garg - Software Developer & AI Enthusiast | Portfolio showcasing projects in AI, ML, and web development">
-    <meta name="keywords" content="Ayush Garg, Software Developer, AI, Machine Learning, Prompt Engineer, Portfolio">
-    <meta name="author" content="Ayush Garg">
-    
-    <title>Ayush Garg | Software Developer & AI Enthusiast</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/icons/favicon.ico">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Iconify for Icons -->
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Three.js for 3D Elements -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="stylesheet" href="assets/css/about.css">
-    <link rel="stylesheet" href="assets/css/skills.css">
-    <link rel="stylesheet" href="assets/css/experience.css">
-    <link rel="stylesheet" href="assets/css/education.css">
-    <link rel="stylesheet" href="assets/css/projects.css">
-    <link rel="stylesheet" href="assets/css/certifications.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-</head>
-<body>
-    
-    <!-- 3D Canvas Background -->
-    <canvas id="webgl-canvas"></canvas>
-    
-    <!-- Cursor Follower -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
-    
-    <!-- Page Loader -->
-    <div class="page-loader">
-        <div class="loader-content">
-            <div class="loader-animation"></div>
-            <p class="loader-text">Loading Experience...</p>
-        </div>
-    </div>
-    
-    <!-- ========== HEADER ========== -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo">
-                <span class="logo-bracket">&lt;</span>
-                <span class="logo-text">Ayush</span>
-                <span class="logo-bracket">/&gt;</span>
-            </a>
-            
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <span class="nav__number">01.</span>
-                            <span class="nav__text">Home</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <span class="nav__number">02.</span>
-                            <span class="nav__text">About</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <span class="nav__number">03.</span>
-                            <span class="nav__text">Skills</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">
-                            <span class="nav__number">04.</span>
-                            <span class="nav__text">Experience</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#education" class="nav__link">
-                            <span class="nav__number">05.</span>
-                            <span class="nav__text">Education</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#projects" class="nav__link">
-                            <span class="nav__number">06.</span>
-                            <span class="nav__text">Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#certifications" class="nav__link">
-                            <span class="nav__number">07.</span>
-                            <span class="nav__text">Certifications</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <span class="nav__number">08.</span>
-                            <span class="nav__text">Contact</span>
-                        </a>
-                    </li>
-                </ul>
-                
-                <div class="nav__close" id="nav-close">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-            
-            <div class="nav__actions">
-                <a href="https://drive.google.com/file/d/1TXqhr4d7rgd6Wqf8tSNRCf9BzlZbSMB1/view?usp=drive_link" 
-                   class="nav__resume-btn" target="_blank" rel="noopener noreferrer">
-                    <span>Resume</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-                
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <!-- ========== MAIN CONTENT ========== -->
-    <main class="main">
-        
-        <!-- ========== HOME SECTION ========== -->
-        <section class="home section" id="home">
-            <div class="home__container container">
-                <div class="home__content">
-                    <div class="home__text-content">
-                        <p class="home__greeting" data-aos="fade-up">
-                            <span class="greeting-icon">👋</span> Hello, I'm
-                        </p>
-                        <h1 class="home__title" data-aos="fade-up" data-aos-delay="100">
-                            <span class="title-name">Ayush Garg</span>
-                        </h1>
-                        <h2 class="home__subtitle" data-aos="fade-up" data-aos-delay="200">
-                            <span class="subtitle-highlight">Software Developer</span> & 
-                            <span class="subtitle-highlight">AI Enthusiast</span>
-                        </h2>
-                        <p class="home__description" data-aos="fade-up" data-aos-delay="300">
-                            Crafting intelligent solutions with code and pushing the boundaries of AI innovation. 
-                            Specialized in Prompt Engineering and building AI-driven applications.
-                        </p>
-                        
-                        <div class="home__buttons" data-aos="fade-up" data-aos-delay="400">
-                            <a href="#projects" class="btn btn-primary">
-                                <span>View My Work</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            <a href="#contact" class="btn btn-secondary">
-                                <span>Let's Talk</span>
-                                <i class="fa-solid fa-message"></i>
-                            </a>
-                        </div>
-                        
-                        <div class="home__social" data-aos="fade-up" data-aos-delay="500">
-                            <a href="https://www.linkedin.com/in/ayush-garg08/" class="social-link" target="_blank" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/ayush8802" class="social-link" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="mailto:ayushgarg916@gmail.com" class="social-link" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                            <a href="https://x.com/ayush8802" class="social-link" target="_blank" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="home__visual" data-aos="fade-left" data-aos-delay="600">
-                        <div class="visual-card">
-                            <div class="card-glow"></div>
-                            <img src="assets/img/profile/ayush_cover.png" alt="Ayush Garg" class="home__img">
-                        </div>
-                        <div class="floating-elements">
-                            <div class="float-element element-1">
-                                <i class="iconify" data-icon="logos:python"></i>
-                            </div>
-                            <div class="float-element element-2">
-                                <i class="iconify" data-icon="logos:langchain"></i>
-                            </div>
-                            <div class="float-element element-3">
-                                <i class="iconify" data-icon="logos:javascript"></i>
-                            </div>
-                            <div class="float-element element-4">
-                                <i class="iconify" data-icon="simple-icons:openai"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="home__scroll" data-aos="fade-up" data-aos-delay="700">
-                    <a href="#about" class="scroll-down">
-                        <span class="scroll-text">Scroll Down</span>
-                        <span class="scroll-line"></span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== ABOUT SECTION ========== -->
-        <section class="about section" id="about">
-            <div class="about__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">02.</span>
-                    <h2 class="section-title">About Me</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="about__content">
-                    <div class="about__image-wrapper" data-aos="fade-right">
-                        <div class="about__image-card">
-                            <div class="image-border"></div>
-                            <img src="assets/img/profile/ayush_about.jpg" alt="Ayush Garg" class="about__img">
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="about__text-wrapper" data-aos="fade-left">
-                        <p class="about__text">
-                            Hello! I'm Ayush, a passionate <span class="highlight">Computer Science graduate</span> 
-                            with a deep fascination for <span class="highlight">software development and AI technologies</span>.
-                        </p>
-                        
-                        <p class="about__text">
-                            At <span class="highlight">Softage Information Technology Limited</span>, I worked as a 
-                            <span class="highlight">Prompt Engineer</span>, where I specialized in optimizing AI model 
-                            performance using <span class="highlight">Reinforcement Learning with Human Feedback (RLHF)</span>. 
-                            This experience gave me unique insights into how AI systems learn and evolve through real-world feedback.
-                        </p>
-                        
-                        <p class="about__text">
-                            With proficiency in <span class="highlight">C++, Python</span>, and frameworks like 
-                            <span class="highlight">Langchain and Hugging Face</span>, I've built diverse projects 
-                            ranging from e-commerce platforms to AI-driven bots. My current focus is on exploring 
-                            <span class="highlight">generative AI</span> and contributing to the development of 
-                            cutting-edge <span class="highlight">Large Language Models</span>.
-                        </p>
-                        
-                        <p class="about__text">
-                            I'm committed to continuous learning and innovation, always seeking new challenges where 
-                            I can leverage my technical and problem-solving skills to create impactful solutions.
-                        </p>
-                        
-                        <div class="about__stats">
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="2">0</h3>
-                                <p class="stat-label">Years Experience</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="10">0</h3>
-                                <p class="stat-label">Projects Completed</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number" data-target="6">0</h3>
-                                <p class="stat-label">Certifications</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== SKILLS SECTION ========== -->
-        <section class="skills section" id="skills">
-            <div class="skills__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">03.</span>
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <p class="skills__intro" data-aos="fade-up">
-                    I specialize in building intelligent systems with a strong foundation in both 
-                    <span class="highlight">software development</span> and <span class="highlight">AI technologies</span>.
-                </p>
-                
-                <div class="skills__content">
-                    <!-- Programming Languages -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="category-title">
-                            <i class="fa-solid fa-code"></i>
-                            Programming Languages
-                        </h3>
-                        <div class="skill-cards">
-                            <div class="skill-card" data-skill="cpp">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:c-plusplus"></span>
-                                </div>
-                                <h4 class="skill-name">C++</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
-                                </div>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="python">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:python"></span>
-                                </div>
-                                <h4 class="skill-name">Python</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
-                                </div>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="javascript">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:javascript"></span>
-                                </div>
-                                <h4 class="skill-name">JavaScript</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="50"></div>
-                                </div>
-                                <span class="skill-percentage">50%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- AI/ML Technologies -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="category-title">
-                            <i class="fa-solid fa-brain"></i>
-                            AI/ML Technologies
-                        </h3>
-                        <div class="skill-cards">
-                            <div class="skill-card" data-skill="langchain">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="simple-icons:langchain"></span>
-                                </div>
-                                <h4 class="skill-name">Langchain</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
-                                </div>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="numpy">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:numpy"></span>
-                                </div>
-                                <h4 class="skill-name">NumPy</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="70"></div>
-                                </div>
-                                <span class="skill-percentage">70%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="pandas">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:pandas"></span>
-                                </div>
-                                <h4 class="skill-name">Pandas</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="70"></div>
-                                </div>
-                                <span class="skill-percentage">70%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="rag">
-                                <div class="skill-icon">
-                                    <i class="fa-solid fa-database"></i>
-                                </div>
-                                <h4 class="skill-name">RAG</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="60"></div>
-                                </div>
-                                <span class="skill-percentage">60%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="nlp">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="twemoji:brain"></span>
-                                </div>
-                                <h4 class="skill-name">NLP</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="30"></div>
-                                </div>
-                                <span class="skill-percentage">30%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Web Technologies -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="category-title">
-                            <i class="fa-solid fa-window-maximize"></i>
-                            Web Technologies
-                        </h3>
-                        <div class="skill-cards">
-                            <div class="skill-card" data-skill="html">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="vscode-icons:file-type-html"></span>
-                                </div>
-                                <h4 class="skill-name">HTML5</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
-                                </div>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="css">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="vscode-icons:file-type-css"></span>
-                                </div>
-                                <h4 class="skill-name">CSS3</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
-                                </div>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Databases & Tools -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                        <h3 class="category-title">
-                            <i class="fa-solid fa-database"></i>
-                            Databases & Tools
-                        </h3>
-                        <div class="skill-cards">
-                            <div class="skill-card" data-skill="sql">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:mysql"></span>
-                                </div>
-                                <h4 class="skill-name">SQL</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="85"></div>
-                                </div>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="mongodb">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:mongodb"></span>
-                                </div>
-                                <h4 class="skill-name">MongoDB</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="75"></div>
-                                </div>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="vscode">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:visual-studio-code"></span>
-                                </div>
-                                <h4 class="skill-name">VS Code</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="80"></div>
-                                </div>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            
-                            <div class="skill-card" data-skill="aws">
-                                <div class="skill-icon">
-                                    <span class="iconify" data-icon="logos:aws"></span>
-                                </div>
-                                <h4 class="skill-name">AWS</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-width="60"></div>
-                                </div>
-                                <span class="skill-percentage">60%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== EXPERIENCE SECTION ========== -->
-        <section class="experience section" id="experience">
-            <div class="experience__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">04.</span>
-                    <h2 class="section-title">Work Experience</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="experience__timeline">
-                    <div class="timeline-line"></div>
-                    
-                    <div class="timeline-item" data-aos="fade-right">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">October 2024 – Present</span>
-                            <h3 class="timeline-title">Freelancer</h3>
-                            <h4 class="timeline-company">outlier.ai</h4>
-                            <p class="timeline-description">
-                                Gaining practical knowledge from different projects for various AI model training 
-                                by providing expert feedback and evaluations to improve model performance.
-                            </p>
-                            <div class="timeline-tags">
-                                <span class="tag">AI Training</span>
-                                <span class="tag">Model Evaluation</span>
-                                <span class="tag">Quality Assurance</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-aos="fade-left">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">March 2024 – August 2024</span>
-                            <h3 class="timeline-title">Prompt Engineer</h3>
-                            <h4 class="timeline-company">SoftAge Information Technology Limited</h4>
-                            <p class="timeline-description">
-                                Implemented Reinforcement Learning through Human Feedback (RLHF) to enhance AI model 
-                                accuracy. Managed extensive datasets and developed refined prompts for large language 
-                                models, collaborating with cross-functional teams to integrate cutting-edge AI solutions.
-                            </p>
-                            <div class="timeline-tags">
-                                <span class="tag">RLHF</span>
-                                <span class="tag">Prompt Engineering</span>
-                                <span class="tag">LLMs</span>
-                                <span class="tag">Data Management</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-aos="fade-right">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">August 2023 – August 2023</span>
-                            <h3 class="timeline-title">Software Developer Intern</h3>
-                            <h4 class="timeline-company">Prodigy InfoTech</h4>
-                            <p class="timeline-description">
-                                Developed multiple web applications including a temperature converter, Sudoku solver, 
-                                and contact management system. Created engaging interactive games and dynamic interfaces 
-                                using modern web technologies.
-                            </p>
-                            <div class="timeline-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">HTML/CSS</span>
-                                <span class="tag">C++</span>
-                                <span class="tag">Web Development</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== EDUCATION SECTION ========== -->
-        <section class="education section" id="education">
-            <div class="education__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">05.</span>
-                    <h2 class="section-title">Education</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="education__content">
-                    <div class="education-card" data-aos="zoom-in">
-                        <div class="card-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="card-content">
-                            <span class="education-date">2020 - 2024</span>
-                            <h3 class="education-degree">Bachelor of Technology</h3>
-                            <h4 class="education-institution">Dronacharya Group Of Institutions</h4>
-                            <p class="education-detail">Branch: Computer Science & Engineering</p>
-                            <p class="education-detail">CGPA: <span class="highlight">7.57/10</span></p>
-                        </div>
-                    </div>
-                    
-                    <div class="education-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="card-icon">
-                            <i class="fas fa-school"></i>
-                        </div>
-                        <div class="card-content">
-                            <span class="education-date">2019 - 2020</span>
-                            <h3 class="education-degree">Sr. Secondary Education</h3>
-                            <h4 class="education-institution">D.L.D.A.V Model School, Shalimar Bagh, Delhi</h4>
-                            <p class="education-detail">Percentage: <span class="highlight">70.33%</span></p>
-                        </div>
-                    </div>
-                    
-                    <div class="education-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="card-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="card-content">
-                            <span class="education-date">2017 - 2018</span>
-                            <h3 class="education-degree">Secondary Education</h3>
-                            <h4 class="education-institution">D.L.D.A.V Model School, Shalimar Bagh, Delhi</h4>
-                            <p class="education-detail">Percentage: <span class="highlight">76%</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== PROJECTS SECTION ========== -->
-        <section class="projects section" id="projects">
-            <div class="projects__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">06.</span>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="projects__grid">
-                    <div class="project-card featured" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="assets/img/projects/project_1.jpg" alt="llama2-blog-generator">
-                            <div class="project-overlay">
-                                <div class="overlay-links">
-                                    <a href="https://github.com/ayush8802/llama2-blog-generator" class="overlay-link" target="_blank" aria-label="View Code">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <span class="project-label">Featured Project</span>
-                            <h3 class="project-title">llama2-blog-generator</h3>
-                            <div class="project-description">
-                                <p>
-                                    A Streamlit application that harnesses the power of the LLaMA 2 language model 
-                                    to create personalized blog content with customizable writing styles and tones.
-                                </p>
-                            </div>
-                            <ul class="project-features">
-                                <li><i class="fa-solid fa-check"></i> Customizable blog generation with word count control</li>
-                                <li><i class="fa-solid fa-check"></i> Multiple writing styles (researcher, data scientist, storyteller)</li>
-                                <li><i class="fa-solid fa-check"></i> Downloadable content as text files</li>
-                                <li><i class="fa-solid fa-check"></i> User-friendly Streamlit interface</li>
-                            </ul>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">LLaMA 2</span>
-                                <span class="tech-tag">Streamlit</span>
-                                <span class="tech-tag">NLP</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Add more project cards here in future -->
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== CERTIFICATIONS SECTION ========== -->
-        <section class="certifications section" id="certifications">
-            <div class="certifications__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">07.</span>
-                    <h2 class="section-title">Certifications</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="certifications__grid">
-                    <div class="cert-card" data-aos="zoom-in">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/MicrosoftCertificate_page-0001.jpg" alt="Microsoft Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/research paper_page-0001.jpg" alt="Research Paper Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/102_11072_page-0001.jpg" alt="Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/Ayush Garg (2)_page-0001.jpg" alt="Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/Ayush Garg(1)_page-0001.jpg" alt="Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="cert-image">
-                            <img src="assets/img/certificates/Certificate-Advanced Excel Tutorial Online-Ayush_page-0001.jpg" alt="Excel Certificate">
-                            <div class="cert-overlay">
-                                <button class="view-cert-btn">
-                                    <i class="fa-solid fa-expand"></i>
-                                    View Certificate
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Certificate Modal -->
-            <div class="cert-modal" id="cert-modal">
-                <div class="modal-overlay"></div>
-                <div class="modal-content">
-                    <button class="modal-close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <img src="" alt="Certificate" class="modal-image">
-                </div>
-            </div>
-        </section>
-        
-        <!-- ========== CONTACT SECTION ========== -->
-        <section class="contact section" id="contact">
-            <div class="contact__container container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-number">08.</span>
-                    <h2 class="section-title">Get In Touch</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="contact__content">
-                    <div class="contact__info" data-aos="fade-right">
-                        <h3 class="contact__subtitle">Let's Work Together</h3>
-                        <p class="contact__description">
-                            I'm always open to discussing new projects, creative ideas, or opportunities 
-                            to be part of your vision. Whether you have a question or just want to say hi, 
-                            I'll try my best to get back to you!
-                        </p>
-                        
-                        <div class="contact__details">
-                            <div class="detail-item">
-                                <div class="detail-icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="detail-content">
-                                    <h4>Email</h4>
-                                    <a href="mailto:ayushgarg916@gmail.com">ayushgarg916@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="detail-item">
-                                <div class="detail-icon">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="detail-content">
-                                    <h4>Phone</h4>
-                                    <a href="tel:+919560845753">+91-9560845753</a>
-                                </div>
-                            </div>
-                            
-                            <div class="detail-item">
-                                <div class="detail-icon">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="detail-content">
-                                    <h4>Location</h4>
-                                    <p>Delhi, India</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact__social">
-                            <h4>Follow Me</h4>
-                            <div class="social-links">
-                                <a href="https://www.linkedin.com/in/ayush-garg08/" class="social-link" target="_blank" aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://github.com/ayush8802" class="social-link" target="_blank" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://x.com/ayush8802" class="social-link" target="_blank" aria-label="Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="mailto:ayushgarg916@gmail.com" class="social-link" aria-label="Email">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <form class="contact__form" id="contact-form" data-aos="fade-left">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                class="form-input" 
-                                placeholder="John Doe"
-                                required
-                            >
-                            <span class="form-error"></span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                class="form-input" 
-                                placeholder="john@example.com"
-                                required
-                            >
-                            <span class="form-error"></span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input 
-                                type="text" 
-                                id="subject" 
-                                name="subject" 
-                                class="form-input" 
-                                placeholder="How can I help you?"
-                                required
-                            >
-                            <span class="form-error"></span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                class="form-textarea" 
-                                rows="6" 
-                                placeholder="Tell me about your project..."
-                                required
-                            ></textarea>
-                            <span class="form-error"></span>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary form-submit">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-icon">
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </span>
-                        </button>
-                        
-                        <div class="form-status"></div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        
-    </main>
-    
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="footer__container container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <a href="#home" class="footer__logo">
-                        <span class="logo-bracket">&lt;</span>
-                        <span class="logo-text">Ayush Garg</span>
-                        <span class="logo-bracket">/&gt;</span>
-                    </a>
-                    <p class="footer__description">
-                        Software Developer & AI Enthusiast crafting intelligent solutions 
-                        with passion and precision.
-                    </p>
-                </div>
-                
-                <div class="footer__links">
-                    <div class="footer__group">
-                        <h4 class="footer__title">Quick Links</h4>
-                        <ul class="footer__list">
-                            <li><a href="#home" class="footer__link">Home</a></li>
-                            <li><a href="#about" class="footer__link">About</a></li>
-                            <li><a href="#skills" class="footer__link">Skills</a></li>
-                            <li><a href="#experience" class="footer__link">Experience</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer__group">
-                        <h4 class="footer__title">More</h4>
-                        <ul class="footer__list">
-                            <li><a href="#education" class="footer__link">Education</a></li>
-                            <li><a href="#projects" class="footer__link">Projects</a></li>
-                            <li><a href="#certifications" class="footer__link">Certifications</a></li>
-                            <li><a href="#contact" class="footer__link">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer__group">
-                        <h4 class="footer__title">Connect</h4>
-                        <div class="footer__social">
-                            <a href="https://www.linkedin.com/in/ayush-garg08/" class="footer__social-link" target="_blank" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/ayush8802" class="footer__social-link" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://x.com/ayush8802" class="footer__social-link" target="_blank" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="mailto:ayushgarg916@gmail.com" class="footer__social-link" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer__bottom">
-                <p class="footer__copy">
-                    &copy; 2024 <span class="highlight">Ayush Garg</span>. All rights reserved.
-                </p>
-                <p class="footer__made">
-                    Designed & Built with <span class="heart">❤️</span> by Ayush
-                </p>
-            </div>
-        </div>
-        
-        <!-- Scroll to Top Button -->
-        <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
-            <i class="fa-solid fa-arrow-up"></i>
-        </button>
-    </footer>
-    
-    <!-- ========== JAVASCRIPT FILES ========== -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/header.js"></script>
-    <script src="assets/js/home.js"></script>
-    <script src="assets/js/about.js"></script>
-    <script src="assets/js/skills.js"></script>
-    <script src="assets/js/experience.js"></script> -->
-    <script src="assets/js/education.js"></script>
-    <script src="assets/js/projects.js"></script>
-    <script src="assets/js/certifications.js"></script>
-    <script src="assets/js/contact.js"></script>
-    <script src="assets/js/three-scene.js"></script>
-    <script src="assets/js/scroll-animations.js"></script>
-    
+
 </body>
 </html>
