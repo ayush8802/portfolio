@@ -1,22 +1,20 @@
 /* ========================================
-   MAIN JAVASCRIPT - FIXED VERSION
+   MAIN JAVASCRIPT - FAST LOADING
 ======================================== */
 
 (function() {
     'use strict';
 
-    // ========== PAGE LOADER (FIXED) ==========
-    window.addEventListener('load', function() {
-        const loader = document.querySelector('.page-loader');
-        if (loader) {
-            setTimeout(function() {
-                loader.style.opacity = '0';
-                loader.style.visibility = 'hidden';
-                loader.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }, 1000);
-        }
-    });
+    // ========== INSTANT LOADER REMOVAL ==========
+    // Remove loader immediately, don't wait for full page load
+    const loader = document.querySelector('.page-loader');
+    if (loader) {
+        // Hide loader after DOM is ready (not waiting for resources)
+        setTimeout(function() {
+            loader.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 500); // Reduced from 1000ms to 500ms
+    }
 
     // ========== SMOOTH SCROLL ==========
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
