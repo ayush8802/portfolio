@@ -12,7 +12,7 @@
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     
-    <!-- Google Fonts - Preload for performance -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,34 +32,11 @@
     <link rel="stylesheet" href="assets/css/certifications.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/enhanced-theme.css">
-    
-    <!-- Inline Critical CSS for faster initial load -->
-    <style>
-        /* Remove page loader immediately */
-        .page-loader {
-            display: none !important;
-        }
-        
-        /* Smooth initial rendering */
-        body {
-            opacity: 0;
-            animation: fadeIn 0.3s ease-in forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
 </head>
 <body>
     
-    <!-- 3D Canvas Background - Hidden for performance -->
-    <canvas id="webgl-canvas" style="display: none;"></canvas>
-    
-    <!-- Cursor Follower -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
     
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress"></div>
@@ -141,58 +118,60 @@
         
         <!-- ========== HOME ========== -->
         <section class="home section" id="home">
-            <div class="home__container container grid">
+            <div class="home__container container">
                 <div class="home__content">
-                    <span class="home__greeting">Hello, I'm</span>
-                    <h1 class="home__title">Ayush Garg</h1>
-                    <h2 class="home__subtitle">Software Developer & AI Enthusiast</h2>
-                    <p class="home__description">
-                        Crafting intelligent solutions with code and pushing the boundaries of AI innovation. 
-                        Specialized in Prompt Engineering and building AI-driven applications.
-                    </p>
-                    
-                    <div class="home__buttons">
-                        <a href="#contact" class="button button-primary">
-                            <span>Get In Touch</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#projects" class="button button-secondary">
-                            <span>View Projects</span>
-                            <i class="fas fa-briefcase"></i>
-                        </a>
+                    <div>
+                        <span class="home__greeting">Hello, I'm</span>
+                        <h1 class="home__title">Ayush Garg</h1>
+                        <h2 class="home__subtitle">Software Developer & AI Enthusiast</h2>
+                        <p class="home__description">
+                            Crafting intelligent solutions with code and pushing the boundaries of AI innovation. 
+                            Specialized in Prompt Engineering and building AI-driven applications.
+                        </p>
+                        
+                        <div class="home__buttons">
+                            <a href="#contact" class="button button-primary">
+                                <span>Get In Touch</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#projects" class="button button-secondary">
+                                <span>View Projects</span>
+                                <i class="fas fa-briefcase"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="home__social">
+                            <a href="https://github.com/yourusername" target="_blank" class="home__social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/yourusername" target="_blank" class="home__social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/yourusername" target="_blank" class="home__social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="mailto:your.email@example.com" class="home__social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                     </div>
                     
-                    <div class="home__social">
-                        <a href="https://github.com/yourusername" target="_blank" class="home__social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="home__social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com/yourusername" target="_blank" class="home__social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="mailto:your.email@example.com" class="home__social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="home__image">
-                    <div class="home__img-wrapper">
-                        <img src="https://ui-avatars.com/api/?name=Ayush+Garg&size=500&background=00d9ff&color=fff&bold=true" alt="Ayush Garg" class="home__img" loading="lazy">
-                        <div class="home__img-overlay"></div>
-                    </div>
-                    
-                    <!-- Floating Elements -->
-                    <div class="float-element float-1">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="float-element float-2">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="float-element float-3">
-                        <i class="fas fa-robot"></i>
+                    <div class="home__image">
+                        <div class="home__img-wrapper">
+                            <img src="https://ui-avatars.com/api/?name=Ayush+Garg&size=500&background=222&color=fff&bold=true" alt="Ayush Garg" class="home__img" loading="lazy">
+                            <div class="home__img-overlay"></div>
+                        </div>
+                        
+                        <!-- Floating Elements -->
+                        <div class="float-element float-1">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="float-element float-2">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="float-element float-3">
+                            <i class="fas fa-robot"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,7 +193,7 @@
             
             <div class="about__container container grid">
                 <div class="about__image-card">
-                    <img src="https://ui-avatars.com/api/?name=AG&size=400&background=1a1a2e&color=00d9ff&bold=true" alt="About Ayush" class="about__img" loading="lazy">
+                    <img src="https://ui-avatars.com/api/?name=AG&size=400&background=1a1a1a&color=fff&bold=true" alt="About Ayush" class="about__img" loading="lazy">
                     <div class="about__img-overlay"></div>
                 </div>
                 
@@ -232,10 +211,6 @@
                         With proficiency in C++, Python, and frameworks like Langchain and Hugging Face, I've built 
                         diverse projects ranging from e-commerce platforms to AI-driven bots. My current focus is on 
                         exploring generative AI and contributing to the development of cutting-edge Large Language Models.
-                    </p>
-                    <p class="about__description">
-                        I'm committed to continuous learning and innovation, always seeking new challenges where I can 
-                        leverage my technical and problem-solving skills to create impactful solutions.
                     </p>
                     
                     <div class="about__stats">
@@ -624,9 +599,9 @@
             
             <div class="projects__container container grid">
                 <!-- Project Card 1 -->
-                <div class="project-card" data-category="ai">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Blog+Generator" alt="Blog Generator" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Blog+Generator" alt="Blog Generator" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" target="_blank">
@@ -654,9 +629,9 @@
                 </div>
 
                 <!-- Project Card 2 -->
-                <div class="project-card" data-category="web">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=E-Commerce" alt="E-Commerce Platform" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=E-Commerce" alt="E-Commerce Platform" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" target="_blank">
@@ -684,9 +659,9 @@
                 </div>
 
                 <!-- Project Card 3 -->
-                <div class="project-card" data-category="ai">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=AI+Chatbot" alt="AI Chatbot" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=AI+Chatbot" alt="AI Chatbot" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" target="_blank">
@@ -714,9 +689,9 @@
                 </div>
 
                 <!-- Project Card 4 -->
-                <div class="project-card" data-category="web">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Sudoku+Solver" alt="Sudoku Solver" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Sudoku+Solver" alt="Sudoku Solver" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" target="_blank">
@@ -743,9 +718,9 @@
                 </div>
 
                 <!-- Project Card 5 -->
-                <div class="project-card" data-category="web">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Contact+Manager" alt="Contact Management" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Contact+Manager" alt="Contact Management" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" target="_blank">
@@ -772,9 +747,9 @@
                 </div>
 
                 <!-- Project Card 6 -->
-                <div class="project-card" data-category="ai">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Image+Classifier" alt="Image Classifier" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Image+Classifier" alt="Image Classifier" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" target="_blank">
@@ -814,7 +789,7 @@
                 <!-- Certificate Card 1 -->
                 <div class="cert-card">
                     <div class="cert-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Microsoft+Certificate" alt="Microsoft Certificate" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Microsoft+Certificate" alt="Microsoft Certificate" loading="lazy">
                         <div class="cert-overlay">
                             <button class="view-cert-btn">
                                 <i class="fas fa-eye"></i>
@@ -835,7 +810,7 @@
                 <!-- Certificate Card 2 -->
                 <div class="cert-card">
                     <div class="cert-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Research+Paper" alt="Research Paper" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Research+Paper" alt="Research Paper" loading="lazy">
                         <div class="cert-overlay">
                             <button class="view-cert-btn">
                                 <i class="fas fa-eye"></i>
@@ -856,7 +831,7 @@
                 <!-- Certificate Card 3 -->
                 <div class="cert-card">
                     <div class="cert-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Python+Certificate" alt="Python Certificate" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Python+Certificate" alt="Python Certificate" loading="lazy">
                         <div class="cert-overlay">
                             <button class="view-cert-btn">
                                 <i class="fas fa-eye"></i>
@@ -877,7 +852,7 @@
                 <!-- Certificate Card 4 -->
                 <div class="cert-card">
                     <div class="cert-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Excel+Certificate" alt="Excel Certificate" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Excel+Certificate" alt="Excel Certificate" loading="lazy">
                         <div class="cert-overlay">
                             <button class="view-cert-btn">
                                 <i class="fas fa-eye"></i>
@@ -898,7 +873,7 @@
                 <!-- Certificate Card 5 -->
                 <div class="cert-card">
                     <div class="cert-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=ML+Certificate" alt="Machine Learning" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=ML+Certificate" alt="Machine Learning" loading="lazy">
                         <div class="cert-overlay">
                             <button class="view-cert-btn">
                                 <i class="fas fa-eye"></i>
@@ -919,7 +894,7 @@
                 <!-- Certificate Card 6 -->
                 <div class="cert-card">
                     <div class="cert-image">
-                        <img src="https://placehold.co/600x400/1a1a2e/00d9ff?text=Web+Dev+Certificate" alt="Web Development" loading="lazy">
+                        <img src="https://placehold.co/600x400/1a1a1a/fff?text=Web+Dev+Certificate" alt="Web Development" loading="lazy">
                         <div class="cert-overlay">
                             <button class="view-cert-btn">
                                 <i class="fas fa-eye"></i>
@@ -1126,12 +1101,12 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- ========== JAVASCRIPT - OPTIMIZED LOADING ========== -->
+    <!-- ========== JAVASCRIPT ========== -->
     
-    <!-- Iconify Icons - Deferred -->
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+    <!-- Three.js - Load ONLY ONCE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
-    <!-- Custom JavaScript Files - All Deferred for Fast Loading -->
+    <!-- Custom JavaScript Files - Deferred -->
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/header.js" defer></script>
     <script src="assets/js/home.js" defer></script>
