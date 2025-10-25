@@ -1,5 +1,5 @@
 /* ========================================
-   SKILLS.JS - Animated Progress Bars
+   SKILLS.JS - Fixed Progress Bar Animation
 ======================================== */
 
 (function() {
@@ -18,14 +18,19 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const bar = entry.target;
-                    const width = bar.style.width;
                     
-                    // Reset width to 0 first
+                    // Get the target width from inline style
+                    const targetWidth = bar.style.width;
+                    
+                    // Store it as CSS variable
+                    bar.style.setProperty('--progress-width', targetWidth);
+                    
+                    // Reset to 0
                     bar.style.width = '0';
                     
-                    // Animate to target width
+                    // Trigger animation after a small delay
                     setTimeout(() => {
-                        bar.style.width = width;
+                        bar.classList.add('animate');
                     }, 100);
                     
                     // Only animate once
