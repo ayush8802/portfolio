@@ -1,11 +1,13 @@
 /* ========================================
-   SKILLS.JS - Fixed Progress Bar Animation
+   SKILLS.JS - Progress Bar Animations
 ======================================== */
 
 (function() {
     'use strict';
 
-    // Animate skill bars when they come into view
+    console.log('✅ Skills section loaded');
+
+    // Simple animation trigger on scroll
     function animateSkillBars() {
         const skillBars = document.querySelectorAll('.skill__progress');
         
@@ -18,39 +20,23 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const bar = entry.target;
-                    
-                    // Get the target width from inline style
-                    const targetWidth = bar.style.width;
-                    
-                    // Store it as CSS variable
-                    bar.style.setProperty('--progress-width', targetWidth);
-                    
-                    // Reset to 0
-                    bar.style.width = '0';
-                    
-                    // Trigger animation after a small delay
-                    setTimeout(() => {
-                        bar.classList.add('animate');
-                    }, 100);
-                    
-                    // Only animate once
+                    bar.style.opacity = '1';
                     observer.unobserve(bar);
                 }
             });
         }, observerOptions);
 
         skillBars.forEach(bar => {
+            bar.style.opacity = '0';
+            bar.style.transition = 'opacity 1s ease';
             observer.observe(bar);
         });
     }
 
-    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', animateSkillBars);
     } else {
         animateSkillBars();
     }
-
-    console.log('✅ Skills animations loaded');
 
 })();
