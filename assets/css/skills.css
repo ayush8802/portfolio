@@ -154,25 +154,58 @@
     color: #ffffff;
 }
 
-/* ========== ANIMATED PROGRESS BAR ========== */
+/* ========== ANIMATED PROGRESS BAR - FIXED ========== */
 .skill__bar {
     width: 100%;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    height: 10px;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skill__progress {
     height: 100%;
-    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+    background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 100%);
     border-radius: 10px;
     position: relative;
-    width: 0;
+    width: 0 !important; /* Start at 0 */
     transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
+
+/* Animated shine effect */
+.skill__progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Add this class when bars should animate */
+.skill__progress.animate {
+    width: var(--progress-width) !important;
+}
+
+/* Skill bar glow on hover */
+.skill__item:hover .skill__progress {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+}
+
 
 /* Animated shine effect */
 .skill__progress::after {
