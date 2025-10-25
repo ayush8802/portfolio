@@ -1,5 +1,5 @@
 /* ========================================
-   HOME SECTION - 3D ANIMATED BACKGROUND
+   HOME SECTION - Animated Background
 ======================================== */
 
 .home {
@@ -12,19 +12,7 @@
     background: #000000;
 }
 
-/* 3D Canvas for Animated Background */
-#webgl-canvas {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    display: block !important;
-    opacity: 0.8;
-}
-
-/* Dark Overlay for Better Text Readability */
+/* CSS-Only Animated Background */
 .home::before {
     content: '';
     position: absolute;
@@ -32,12 +20,48 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
-    z-index: 1;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 90% 70%, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100px 100px, 120px 120px, 140px 140px, 160px 160px, 180px 180px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 20px 50px;
+    animation: moveStars 60s linear infinite;
+    z-index: 0;
     pointer-events: none;
 }
 
-/* ========== HOME CONTAINER ========== */
+@keyframes moveStars {
+    0% {
+        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 20px 50px;
+    }
+    100% {
+        background-position: 100px 100px, 140px 160px, 230px 370px, 170px 200px, 120px 150px;
+    }
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+    animation: gradientPulse 8s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes gradientPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
 .home__container {
     position: relative;
     z-index: 2;
@@ -53,7 +77,6 @@
     align-items: center;
 }
 
-/* ========== LEFT COLUMN - TEXT CONTENT ========== */
 .home__greeting {
     font-size: 1.125rem;
     color: #9ca3af;
@@ -89,7 +112,6 @@
     max-width: 90%;
 }
 
-/* ========== BUTTONS - MINIMALIST STYLE ========== */
 .home__buttons {
     display: flex;
     gap: 1rem;
@@ -135,7 +157,6 @@
     transform: translateY(-2px);
 }
 
-/* ========== SOCIAL LINKS ========== */
 .home__social {
     display: flex;
     gap: 1rem;
@@ -165,7 +186,6 @@
     transform: translateY(-4px);
 }
 
-/* ========== RIGHT COLUMN - IMAGE ========== */
 .home__image {
     position: relative;
     display: flex;
@@ -206,7 +226,6 @@
     opacity: 1;
 }
 
-/* ========== FLOATING ICONS - GLASSMORPHISM ========== */
 .float-element {
     position: absolute;
     background: rgba(255, 255, 255, 0.05);
@@ -243,7 +262,6 @@
     animation-delay: 3.4s;
 }
 
-/* ========== SCROLL DOWN INDICATOR ========== */
 .home__scroll {
     position: absolute;
     bottom: 3rem;
@@ -277,9 +295,6 @@
     50% { transform: translateY(10px); }
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-
-/* Tablets */
 @media screen and (max-width: 968px) {
     .home__content {
         grid-template-columns: 1fr;
@@ -319,7 +334,6 @@
     }
 }
 
-/* Mobile */
 @media screen and (max-width: 576px) {
     .home {
         padding: 100px 0 60px;
@@ -360,10 +374,11 @@
     }
 }
 
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     .float-element,
-    .home__scroll-button i {
+    .home__scroll-button i,
+    .home::before,
+    .home::after {
         animation: none;
     }
 }
