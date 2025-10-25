@@ -1,27 +1,29 @@
 /* ========================================
-   THREE-SCENE.JS - Working 3D Network
+   THREE-SCENE.JS - Working Version
 ======================================== */
 
 (function() {
     'use strict';
 
-    // Wait for DOM to load
-    window.addEventListener('load', function() {
-        
-        // Check if Three.js is loaded
-        if (typeof THREE === 'undefined') {
-            console.error('Three.js not loaded!');
-            return;
-        }
+    console.log('🔄 Loading Three.js animation...');
 
-        const canvas = document.getElementById('webgl-canvas');
-        if (!canvas) {
-            console.error('Canvas not found!');
-            return;
-        }
+    // Check if Three.js loaded
+    if (typeof THREE === 'undefined') {
+        console.error('❌ Three.js not loaded! Check if CDN is accessible.');
+        return;
+    }
 
-        console.log('✅ Starting 3D animation...');
+    console.log('✅ Three.js found, version:', THREE.REVISION);
 
+    const canvas = document.getElementById('webgl-canvas');
+    if (!canvas) {
+        console.error('❌ Canvas element not found!');
+        return;
+    }
+
+    console.log('✅ Canvas element found');
+
+    try {
         // Scene setup
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(
@@ -41,12 +43,13 @@
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         camera.position.z = 50;
 
+        console.log('✅ Renderer created');
+
         // Create particles
         const particlesCount = 150;
         const positions = new Float32Array(particlesCount * 3);
         const velocities = [];
 
-        // Initialize particles
         for (let i = 0; i < particlesCount; i++) {
             positions[i * 3] = (Math.random() - 0.5) * 100;
             positions[i * 3 + 1] = (Math.random() - 0.5) * 100;
@@ -73,7 +76,9 @@
         const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
         scene.add(particlesMesh);
 
-        // Lines material
+        console.log('✅ Particles created:', particlesCount);
+
+        // Lines
         const linesMaterial = new THREE.LineBasicMaterial({
             color: 0xffffff,
             transparent: true,
@@ -93,7 +98,7 @@
             mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
         });
 
-        // Animation loop
+        // Animation
         function animate() {
             requestAnimationFrame(animate);
 
@@ -107,7 +112,6 @@
                 positions[i3 + 1] += velocities[i].y;
                 positions[i3 + 2] += velocities[i].z;
                 
-                // Bounce off boundaries
                 if (Math.abs(positions[i3]) > 50) velocities[i].x *= -1;
                 if (Math.abs(positions[i3 + 1]) > 50) velocities[i].y *= -1;
                 if (Math.abs(positions[i3 + 2]) > 25) velocities[i].z *= -1;
@@ -115,10 +119,8 @@
             
             particlesGeometry.attributes.position.needsUpdate = true;
 
-            // Clear old lines
+            // Clear and redraw lines
             linesGroup.clear();
-
-            // Draw new lines
             const linePositions = [];
             const maxDistance = 20;
 
@@ -149,13 +151,14 @@
             particlesMesh.rotation.y += (mouseX * 0.5 - particlesMesh.rotation.y) * 0.05;
             particlesMesh.rotation.x += (mouseY * 0.5 - particlesMesh.rotation.x) * 0.05;
 
-            // Slow rotation
+            // Auto rotation
             particlesMesh.rotation.y += 0.001;
 
             renderer.render(scene, camera);
         }
 
         animate();
+        console.log('✅ Animation started successfully!');
 
         // Handle resize
         window.addEventListener('resize', () => {
@@ -164,7 +167,8 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        console.log('✅ 3D animation started successfully!');
-    });
+    } catch (error) {
+        console.error('❌ Error creating 3D scene:', error);
+    }
 
 })();
