@@ -1,15 +1,16 @@
 /* ========================================
-   ABOUT SECTION - Corrected & Polished
+   ABOUT SECTION - Lighter Background
 ======================================== */
 
 .about {
     position: relative;
     padding: 100px 0;
-    background: linear-gradient(180deg, #000000 0%, #0a0a1a 100%);
+    /* Lighter gradient - noticeably different from pure black home section */
+    background: linear-gradient(180deg, #1a1f2e 0%, #252b3b 100%);
     overflow: hidden;
 }
 
-/* Subtle background pattern */
+/* Enhanced subtle background pattern */
 .about::before {
     content: '';
     position: absolute;
@@ -18,8 +19,8 @@
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
-        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
     pointer-events: none;
     z-index: 0;
 }
@@ -74,8 +75,8 @@
     aspect-ratio: 3/4;
     border-radius: 20px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     transition: all 0.4s ease;
 }
@@ -83,7 +84,7 @@
 .about__image-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .about__img {
@@ -132,8 +133,8 @@
     gap: 2rem;
     margin: 2rem 0;
     padding: 2.5rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .stat__item {
